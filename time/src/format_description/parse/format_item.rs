@@ -5,7 +5,7 @@ use alloc::string::String;
 use core::num::NonZeroU16;
 use core::str::{self, FromStr};
 
-use super::{ast, unused, Error, Span, Spanned};
+use super::{Error, Span, Spanned, ast, unused};
 
 /// Parse an AST iterator into a sequence of format items.
 pub(super) fn parse<'a>(
