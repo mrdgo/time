@@ -12,7 +12,7 @@ use crate::formatting::Formattable;
 #[cfg(feature = "parsing")]
 use crate::parsing::Parsable;
 use crate::util::DateAdjustment;
-use crate::{error, Duration};
+use crate::{Duration, error};
 
 /// By explicitly inserting this enum where padding is expected, the compiler is able to better
 /// perform niche value optimization.

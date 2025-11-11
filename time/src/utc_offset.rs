@@ -5,6 +5,8 @@ use core::ops::Neg;
 #[cfg(feature = "formatting")]
 use std::io;
 
+#[cfg(feature = "local-offset")]
+use crate::OffsetDateTime;
 use crate::convert::*;
 use crate::error;
 #[cfg(feature = "formatting")]
@@ -13,8 +15,6 @@ use crate::formatting::Formattable;
 use crate::parsing::Parsable;
 #[cfg(feature = "local-offset")]
 use crate::sys::local_offset_at;
-#[cfg(feature = "local-offset")]
-use crate::OffsetDateTime;
 
 /// An offset from UTC.
 ///

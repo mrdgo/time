@@ -93,7 +93,7 @@
     rust_2018_idioms,
     trivial_casts,
     trivial_numeric_casts,
-    unreachable_pub,
+    // unreachable_pub,
     unsafe_op_in_unsafe_fn,
     unused_extern_crates,
     rustdoc::broken_intra_doc_links,

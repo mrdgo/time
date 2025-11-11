@@ -206,7 +206,7 @@ pub use time_macros::serde_format_description as format_description;
 
 use self::visitor::Visitor;
 #[cfg(feature = "parsing")]
-use crate::format_description::{modifier, Component, FormatItem};
+use crate::format_description::{Component, FormatItem, modifier};
 use crate::{Date, Duration, Month, OffsetDateTime, PrimitiveDateTime, Time, UtcOffset, Weekday};
 
 // region: Date

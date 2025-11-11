@@ -1,21 +1,21 @@
 //! Information parsed from an input and format description.
 
 use core::mem::MaybeUninit;
-use core::num::{NonZeroU16, NonZeroU8};
+use core::num::{NonZeroU8, NonZeroU16};
 
-use crate::date_time::{maybe_offset_from_offset, offset_kind, DateTime, MaybeOffset};
+use crate::date_time::{DateTime, MaybeOffset, maybe_offset_from_offset, offset_kind};
 use crate::error::TryFromParsed::InsufficientInformation;
-use crate::format_description::modifier::{WeekNumberRepr, YearRepr};
 #[cfg(feature = "alloc")]
 use crate::format_description::OwnedFormatItem;
+use crate::format_description::modifier::{WeekNumberRepr, YearRepr};
 use crate::format_description::{Component, FormatItem};
-use crate::parsing::component::{
-    parse_day, parse_hour, parse_ignore, parse_minute, parse_month, parse_offset_hour,
-    parse_offset_minute, parse_offset_second, parse_ordinal, parse_period, parse_second,
-    parse_subsecond, parse_unix_timestamp, parse_week_number, parse_weekday, parse_year, Period,
-};
 use crate::parsing::ParsedItem;
-use crate::{error, Date, Month, OffsetDateTime, PrimitiveDateTime, Time, UtcOffset, Weekday};
+use crate::parsing::component::{
+    Period, parse_day, parse_hour, parse_ignore, parse_minute, parse_month, parse_offset_hour,
+    parse_offset_minute, parse_offset_second, parse_ordinal, parse_period, parse_second,
+    parse_subsecond, parse_unix_timestamp, parse_week_number, parse_weekday, parse_year,
+};
+use crate::{Date, Month, OffsetDateTime, PrimitiveDateTime, Time, UtcOffset, Weekday, error};
 
 /// Sealed to prevent downstream implementations.
 mod sealed {

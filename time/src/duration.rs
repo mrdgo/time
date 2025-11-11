@@ -6,10 +6,10 @@ use core::iter::Sum;
 use core::ops::{Add, AddAssign, Div, Mul, Neg, Sub, SubAssign};
 use core::time::Duration as StdDuration;
 
-use crate::convert::*;
-use crate::error;
 #[cfg(feature = "std")]
 use crate::Instant;
+use crate::convert::*;
+use crate::error;
 
 /// By explicitly inserting this enum where padding is expected, the compiler is able to better
 /// perform niche value optimization.

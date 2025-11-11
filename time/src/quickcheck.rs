@@ -36,7 +36,7 @@
 
 use alloc::boxed::Box;
 
-use quickcheck::{empty_shrinker, single_shrinker, Arbitrary, Gen};
+use quickcheck::{Arbitrary, Gen, empty_shrinker, single_shrinker};
 
 use crate::convert::*;
 use crate::date_time::{DateTime, MaybeOffset};

@@ -11,7 +11,7 @@ use crate::date_time::offset_kind;
 use crate::formatting::Formattable;
 #[cfg(feature = "parsing")]
 use crate::parsing::Parsable;
-use crate::{error, Date, DateTime, Duration, Month, OffsetDateTime, Time, UtcOffset, Weekday};
+use crate::{Date, DateTime, Duration, Month, OffsetDateTime, Time, UtcOffset, Weekday, error};
 
 /// The actual type doing all the work.
 type Inner = DateTime<offset_kind::None>;

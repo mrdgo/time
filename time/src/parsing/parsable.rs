@@ -2,15 +2,15 @@
 
 use core::ops::Deref;
 
-use crate::date_time::{maybe_offset_from_offset, MaybeOffset};
+use crate::date_time::{MaybeOffset, maybe_offset_from_offset};
 use crate::error::TryFromParsed;
-use crate::format_description::well_known::iso8601::EncodedConfig;
-use crate::format_description::well_known::{Iso8601, Rfc2822, Rfc3339};
 use crate::format_description::FormatItem;
 #[cfg(feature = "alloc")]
 use crate::format_description::OwnedFormatItem;
+use crate::format_description::well_known::iso8601::EncodedConfig;
+use crate::format_description::well_known::{Iso8601, Rfc2822, Rfc3339};
 use crate::parsing::{Parsed, ParsedItem};
-use crate::{error, Date, DateTime, Month, Time, UtcOffset, Weekday};
+use crate::{Date, DateTime, Month, Time, UtcOffset, Weekday, error};
 
 /// A type that can be parsed.
 #[cfg_attr(__time_03_docs, doc(notable_trait))]

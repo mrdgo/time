@@ -22,7 +22,7 @@ use crate::date::{MAX_YEAR, MIN_YEAR};
 use crate::formatting::Formattable;
 #[cfg(feature = "parsing")]
 use crate::parsing::{Parsable, Parsed};
-use crate::{error, util, Date, Duration, Month, Time, UtcOffset, Weekday};
+use crate::{Date, Duration, Month, Time, UtcOffset, Weekday, error, util};
 
 #[allow(missing_debug_implementations, missing_copy_implementations)]
 pub(crate) mod offset_kind {

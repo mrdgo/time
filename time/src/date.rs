@@ -12,7 +12,7 @@ use crate::formatting::Formattable;
 #[cfg(feature = "parsing")]
 use crate::parsing::Parsable;
 use crate::util::{days_in_year, days_in_year_month, is_leap_year, weeks_in_year};
-use crate::{error, Duration, Month, PrimitiveDateTime, Time, Weekday};
+use crate::{Duration, Month, PrimitiveDateTime, Time, Weekday, error};
 
 /// The minimum valid year.
 pub(crate) const MIN_YEAR: i32 = if cfg!(feature = "large-dates") {

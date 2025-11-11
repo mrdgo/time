@@ -8,8 +8,8 @@ use std::io;
 
 pub use self::formattable::Formattable;
 use crate::convert::*;
-use crate::format_description::{modifier, Component};
-use crate::{error, Date, OffsetDateTime, Time, UtcOffset};
+use crate::format_description::{Component, modifier};
+use crate::{Date, OffsetDateTime, Time, UtcOffset, error};
 
 #[allow(clippy::missing_docs_in_private_items)]
 const MONTH_NAMES: [&[u8]; 12] = [
