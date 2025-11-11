@@ -82,7 +82,7 @@ pub fn parse_owned<const VERSION: usize>(
     let mut lexed = lexer::lex::<VERSION>(s.as_bytes());
     let ast = ast::parse::<_, VERSION>(&mut lexed);
     let format_items = format_item::parse(ast);
-    let items: Box<[Item]> = format_items
+    let items: Box<[Item<'_>]> = format_items
         .map(|res| res.map(Into::into))
         .collect::<Result<Box<_>, _>>()?;
     Ok(items.into())
