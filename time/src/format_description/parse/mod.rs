@@ -3,6 +3,8 @@
 use alloc::boxed::Box;
 use alloc::vec::Vec;
 
+use crate::format_description::parse::format_item::Item;
+
 /// A helper macro to make version restrictions simpler to read and write.
 macro_rules! version {
     ($range:expr) => {
